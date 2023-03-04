@@ -1,3 +1,3 @@
 output "test" {
-  test = "Hello terraform"
+  valvalue = "Hello terraform"
 }
