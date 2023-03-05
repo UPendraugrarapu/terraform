@@ -10,3 +10,7 @@ resource "aws_instance" "frontend" {
 variable "instances" {
   default = ["cart","user","catalogue","rabbitmq","redis"]
 }
+
+output "public-ip" {
+  value = aws_instance.frontend.*.public_ip
+}
