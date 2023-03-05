@@ -4,7 +4,7 @@ resource "aws_instance" "frontend" {
     instance_type = "t3.micro"
     vpc_security_group_ids = ["sg-0901684fec359fab8"]
     tags = {
-      name = var.instances[count.index]
+      Name = var.instances[count.index]
     }
 
 }
