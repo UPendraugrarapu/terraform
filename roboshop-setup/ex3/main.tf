@@ -22,3 +22,7 @@ variable "instances" {
     }
   }
 }
+#to get ip address of catalogue and user
+output "ec2" {
+  value = [for k,v in aws_instance : "${k} - ${v.public_ip}"]
+}
