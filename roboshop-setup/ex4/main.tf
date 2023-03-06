@@ -3,7 +3,7 @@ module "ec2" {
   source        = "./ec2"
   component     = each.value["Name"]
   instance_type = each.value["type"]
-  sg            = module.sg.sg_id
+  sg_id         = module.sg.sg_id
 }
 
 module "sg" {
