@@ -12,16 +12,18 @@ resource "aws_instance" "ec2" {
 #local-exec- in local machine
 
    provisioner "remote-exec" {
+
     connection {
       host = self.public_ip
       user = "root"
       password = "DevOps321"
     }
     
-   }
+   
 
-   inline = [
-    "echo Hi"
-   ]
+    inline = [
+      "echo Hi"
+    ]
 
    }
+}
